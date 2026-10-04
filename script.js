@@ -14,7 +14,9 @@ const LINKS = {
   // Point this at the live drop once the collection page exists.
   mint: "https://opensea.io/",
   // The project X account.
-  x: "https://x.com/"
+  x: "https://x.com/",
+  // The live Agent site — stake in, pick a brain, send it to work.
+  app: "https://hoodstreet-app.onrender.com"
 };
 
 $$("[data-link]").forEach((el) => {

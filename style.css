@@ -1075,6 +1075,19 @@ a {
   text-align: right;
 }
 
+.work-open {
+  margin-top: clamp(40px, 6vw, 70px);
+  text-align: center;
+}
+
+.work-open-note {
+  margin-top: 18px;
+  font-size: .55rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+}
+
 
 /* =========================================================
    MONEY
