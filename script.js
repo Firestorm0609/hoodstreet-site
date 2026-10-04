@@ -1,6 +1,6 @@
 /* =========================================================
-   GREYSTREET — Interactions
-   (adapted from the HoodStreet site)
+   HOODSTREET — Interactions
+
 ========================================================= */
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);

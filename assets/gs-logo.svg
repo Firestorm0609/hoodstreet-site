@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Greystreet">
-  <circle cx="100" cy="100" r="98" fill="#0a0a0a" stroke="#f5f5f0" stroke-width="2"/>
-  <circle cx="100" cy="100" r="84" fill="none" stroke="#666666" stroke-width="1"/>
-  <text x="100" y="50" font-family="Georgia, 'Times New Roman', serif" font-size="13" letter-spacing="3" fill="#999999" text-anchor="middle">GREYSTREET</text>
-  <text x="100" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#f5f5f0" text-anchor="middle">GS</text>
-  <text x="100" y="160" font-family="Georgia, 'Times New Roman', serif" font-size="12" letter-spacing="2" fill="#999999" text-anchor="middle">EST. 2026</text>
-</svg>
