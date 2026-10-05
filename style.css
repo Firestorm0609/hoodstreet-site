@@ -2224,7 +2224,7 @@ footer a:hover { color: var(--white); }
 
 
 /* =========================================================
-   V4 — THE STREET OPENS: entrance, hero lines, ticker, GTD motion
+   V4 — THE STREET OPENS: entrance, hero lines, GTD motion
 ========================================================= */
 
 /* --- entrance: logo, wordmark, tagline, three doors ------ */
@@ -2309,45 +2309,6 @@ body.entrance-done .hero-title .hero-line:nth-child(2) { animation-delay: .14s; 
   to { opacity: 1; transform: none; filter: none; }
 }
 
-/* --- the street talk ticker ------------------------------- */
-
-.ticker {
-  overflow: hidden;
-  padding: 14px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: var(--black-rich);
-}
-
-.ticker-track {
-  display: flex;
-  width: max-content;
-  animation: tickerScroll 38s linear infinite;
-}
-
-.ticker-group {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  padding-right: 28px;
-}
-
-.ticker-item {
-  font-size: .55rem;
-  letter-spacing: .28em;
-  color: var(--grey);
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.ticker-dot { font-size: .45rem; color: var(--grey-dark); }
-
-.ticker:hover .ticker-track { animation-play-state: paused; }
-
-@keyframes tickerScroll {
-  to { transform: translateX(-50%); }
-}
-
 /* --- GTD: button with a pulse inside ---------------------- */
 
 .gtd-submit { position: relative; }
@@ -2420,5 +2381,4 @@ body.entrance-done .hero-title .hero-line:nth-child(2) { animation-delay: .14s; 
 
 @media (max-width: 768px) {
   .entrance-bar span { width: 34px; height: 52px; }
-  .ticker-group { gap: 20px; padding-right: 20px; }
 }

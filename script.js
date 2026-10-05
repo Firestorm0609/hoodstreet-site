@@ -185,13 +185,6 @@ if (gtdForm && gtdAddress && gtdSubmit) {
 }
 
 /* ---------------------------------------------------------
-   TICKER — the street talk, one endless loop
---------------------------------------------------------- */
-
-const tickerGroup = $("#tickerGroup");
-if (tickerGroup) tickerGroup.innerHTML += tickerGroup.innerHTML;
-
-/* ---------------------------------------------------------
    MOBILE MENU
 --------------------------------------------------------- */
 
