@@ -29,11 +29,13 @@ git push -u origin main
 
 No workflow files, no build — the `.nojekyll` file keeps Pages from processing the folder with Jekyll.
 
-## Custom domain (when you have one)
+## Custom domain
+
+Live at `https://hstreet.xyz` — the `CNAME` file in the repo root sets it.
 
 When the DNS is ready:
 
-1. Add a file named `CNAME` (no extension) containing exactly your domain (e.g. `hoodstreet.xyz`).
+1. Add a file named `CNAME` (no extension) containing exactly your domain (e.g. `hstreet.xyz`).
 2. At your DNS provider, point the apex domain to GitHub Pages:
    - A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - Optional AAAA records: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`

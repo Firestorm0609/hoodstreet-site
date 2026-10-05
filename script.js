@@ -16,7 +16,7 @@ const LINKS = {
   // The project X account.
   x: "https://x.com/",
   // The live Agent site — stake in, pick a brain, send it to work.
-  app: "https://hoodstreet-app.onrender.com"
+  app: "https://app.hstreet.xyz"
 };
 
 $$("[data-link]").forEach((el) => {
