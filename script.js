@@ -15,7 +15,7 @@ const LINKS = {
   mint: "https://opensea.io/",
   // The project X account.
   x: "https://x.com/",
-  // The live Agent site — stake in, pick a brain, send it to work.
+  // The live Agent site — enlist, pick a brain, send it to work.
   app: "https://app.hstreet.xyz"
 };
 
