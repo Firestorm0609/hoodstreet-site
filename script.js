@@ -11,10 +11,10 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 --------------------------------------------------------- */
 
 const LINKS = {
-  // Point this at the live drop once the collection page exists.
-  mint: "https://opensea.io/",
+  // The live OpenSea drop.
+  mint: "https://opensea.io/collection/hoodstreetnft",
   // The project X account.
-  x: "https://x.com/",
+  x: "https://x.com/hoodstreetnft",
   // The live Agent site — enlist, pick a brain, send it to work.
   app: "https://app.hstreet.xyz"
 };
