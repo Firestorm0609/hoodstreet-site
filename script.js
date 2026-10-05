@@ -1,14 +1,54 @@
 /* =========================================================
    HOODSTREET — Interactions
 
-   The page has three jobs:
-     1. Apply the live links (OpenSea drop, X, the street app).
-     2. The enlistment form: click stamps it, then opens the app.
-     3. The GTD form: wallet signups for the allowlist stage.
+   The page has four jobs:
+     1. The entrance: logo, tagline, three doors, then the street.
+     2. Apply the live links (OpenSea drop, X, the street app).
+     3. The enlistment form: click "Report For Duty", then opens the app.
+     4. The GTD form: wallet signups for the allowlist stage.
 ========================================================= */
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+/* ---------------------------------------------------------
+   ENTRANCE — logo, tagline, three doors, then the street
+--------------------------------------------------------- */
+
+const entrance = $("#entrance");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (reduceMotion) {
+  entrance?.remove();
+  document.body.classList.add("entrance-done");
+} else if (entrance) {
+  const seq = [0, 500, 1000, 1500, 2000, 2500, 2800, 3100, 3400, 3600];
+
+  seq.forEach((t) => {
+    window.setTimeout(() => entrance.classList.add(`s${t}`), t);
+  });
+
+  // Open the street: the door fades and the hero rises underneath it.
+  const openStreet = () => {
+    if (!entrance.classList.contains("leave")) {
+      entrance.classList.add("leave");
+      document.body.classList.add("entrance-done");
+    }
+  };
+
+  // If anything goes sideways (a stalled font, a blocked image), let people in.
+  window.setTimeout(openStreet, 5600);
+  window.addEventListener("load", () => {
+    window.setTimeout(openStreet, 4300);
+  });
+
+  entrance.addEventListener("transitionend", () => {
+    if (entrance.classList.contains("leave")) entrance.remove();
+  });
+
+  // In a hurry? One click opens the door.
+  entrance.addEventListener("click", openStreet);
+}
 
 /* ---------------------------------------------------------
    LINKS — where the page sends people
@@ -23,8 +63,8 @@ const LINKS = {
   app: "https://app.hstreet.xyz"
 };
 
-// GTD signups land on the API (stored in MongoDB; exported as CSV for the
-// OpenSea Studio allowlist). Without a configured database it answers 503
+// GTD signups land on the API (stored as CSV in the repo; exported for the
+// OpenSea Studio allowlist). Without a configured token it answers 503
 // and the form says the list opens shortly.
 const GTD_ENDPOINT = "https://api.hstreet.xyz/api/gtd";
 
@@ -36,10 +76,8 @@ $$("[data-link]").forEach((el) => {
 const yearEl = $("#year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
 /* ---------------------------------------------------------
-   ENLIST — the form stamps itself, then opens the app
+   ENLIST — "Report For Duty", then open the app
 --------------------------------------------------------- */
 
 const enlistCard = $("#enlistCard");
@@ -62,7 +100,7 @@ if (enlistCard) {
 
     enlistCard.classList.add("stamped");
     if (enlistStatus) {
-      enlistStatus.textContent = "Enlisted — opening the street app.";
+      enlistStatus.textContent = "Reporting for duty — opening the street app.";
     }
 
     // Let the stamp land before the page changes.
@@ -96,11 +134,15 @@ if (gtdForm && gtdAddress && gtdSubmit) {
     const address = gtdAddress.value.trim();
     if (!/^0x[0-9a-fA-F]{40}$/.test(address)) {
       gtdSay("That doesn't look like a wallet address — it should start with 0x.", true);
+      gtdForm.classList.remove("shake");
+      void gtdAddress.offsetWidth; // restart the animation
+      gtdForm.classList.add("shake");
       gtdAddress.focus();
       return;
     }
 
     gtdSubmit.disabled = true;
+    gtdForm.classList.add("checking");
     gtdSay("Checking the list…", false);
 
     try {
@@ -137,9 +179,17 @@ if (gtdForm && gtdAddress && gtdSubmit) {
       gtdSay("Network hiccup — try again.", true);
     }
 
+    gtdForm.classList.remove("checking");
     gtdSubmit.disabled = false;
   });
 }
+
+/* ---------------------------------------------------------
+   TICKER — the street talk, one endless loop
+--------------------------------------------------------- */
+
+const tickerGroup = $("#tickerGroup");
+if (tickerGroup) tickerGroup.innerHTML += tickerGroup.innerHTML;
 
 /* ---------------------------------------------------------
    MOBILE MENU

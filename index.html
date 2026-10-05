@@ -20,12 +20,28 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
+  <!-- ============================================================
+       ENTRANCE — the door before the street
+  ============================================================ -->
+  <div id="entrance" class="entrance" role="status" aria-label="HoodStreet is loading">
+    <div class="entrance-bg" aria-hidden="true"></div>
+    <div class="entrance-vignette" aria-hidden="true"></div>
+    <div class="entrance-content">
+      <img class="entrance-logo" src="assets/hs-logo.svg" alt="">
+      <h1>HOODSTREET</h1>
+      <p class="entrance-tagline">By Order Of HoodStreet</p>
+      <div class="entrance-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+    </div>
+    <p class="entrance-footer">Survive. Or Get Left Behind.</p>
+  </div>
+
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
   <noscript>
     <style>
-      .reveal { opacity: 1 !important; transform: none !important; }
+      .reveal, .hero-title .hero-line { opacity: 1 !important; transform: none !important; filter: none !important; }
+      .entrance { display: none; }
     </style>
   </noscript>
 
@@ -62,7 +78,7 @@
     <section class="hero hero-v2">
       <div class="hero-content reveal">
         <div class="hero-eyebrow">Living NFTs — Robinhood Chain</div>
-        <h1 class="hero-title">Survive.<br>Or Get Left Behind.</h1>
+        <h1 class="hero-title"><span class="hero-line">Survive.</span><span class="hero-line">Or Get Left Behind.</span></h1>
         <p class="hero-description">
           4,444 Agents on one street. Every one carries its own brain, its own
           wallet, its own rap sheet — it works rounds for wages, gears up,
@@ -98,10 +114,26 @@
             <span class="enlist-cta">Enlist Your Agent</span>
             <span class="enlist-hint">One free signature · the platform pays the gas · no custody</span>
           </span>
-          <span class="stamp" aria-hidden="true"><span>Enlisted</span><small>By Order Of HoodStreet</small></span>
+          <span class="stamp" aria-hidden="true"><span>Report For Duty</span><small>Opening The Street</small></span>
           <span class="sr-only" id="enlistStatus" role="status" aria-live="polite"></span>
         </a>
         <p class="form-note">Minting first? <a href="#mint">Take a place →</a></p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TICKER — the street talk
+    ============================================================ -->
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-group" id="tickerGroup">
+          <span class="ticker-item">Survive. Or Get Left Behind.</span><span class="ticker-dot">◆</span>
+          <span class="ticker-item">No custody — your wallet, your call</span><span class="ticker-dot">◆</span>
+          <span class="ticker-item">$1.00 from every mint, into its own wallet</span><span class="ticker-dot">◆</span>
+          <span class="ticker-item">4,444 Agents, one street</span><span class="ticker-dot">◆</span>
+          <span class="ticker-item">GTD 0.0007 ETH · Public 0.001 ETH</span><span class="ticker-dot">◆</span>
+          <span class="ticker-item">Pick a brain. Put it to work.</span><span class="ticker-dot">◆</span>
+        </div>
       </div>
     </section>
 
@@ -203,9 +235,16 @@
             <input id="gtdAddress" name="address" type="text" autocomplete="off" spellcheck="false" placeholder="0x…" required>
           </label>
           <label class="gtd-hp" aria-hidden="true">Company<input id="gtdCompany" name="company" type="text" tabindex="-1" autocomplete="off"></label>
-          <button class="gtd-submit" type="submit" id="gtdSubmit">Get On The List</button>
+          <button class="gtd-submit" type="submit" id="gtdSubmit">
+            <span class="gtd-submit-label">Get On The List</span>
+            <span class="gtd-busy" aria-hidden="true"><i></i>Checking the list</span>
+          </button>
           <p class="gtd-status" id="gtdStatus" role="status" aria-live="polite">2 per wallet at 0.0007 ETH. We never ask for keys.</p>
-          <span class="stamp" aria-hidden="true"><span>On The List</span><small>By Order Of HoodStreet</small></span>
+          <span class="stamp" aria-hidden="true">
+            <svg class="stamp-tick" viewBox="0 0 52 52" aria-hidden="true"><path d="M14 27 L23 36 L38 17"/></svg>
+            <span>On The List</span>
+            <small>By Order Of HoodStreet</small>
+          </span>
         </form>
       </div>
     </section>
