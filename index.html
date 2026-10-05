@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0a0a0a">
-  <meta name="description" content="HoodStreet. 4,444 living tokens on Robinhood Chain. Each Agent carries its own brain and its own wallet — it saves, spends, gambles and steals, and it works for wages. Every mint sends $1.00 straight into its Agent's wallet. Mint through OpenSea: GTD 0.0007 ETH, public 0.001 ETH. By Order Of HoodStreet.">
+  <meta name="description" content="HoodStreet — 4,444 living Agents on Robinhood Chain. Each carries its own brain, its own wallet, and works rounds for wages. Every mint sends $1.00 straight into its Agent's wallet. Mint through OpenSea: GTD 0.0007 ETH, public 0.001 ETH.">
   <meta property="og:title" content="HoodStreet — The First Generation Of Living NFTs">
-  <meta property="og:description" content="4,444 living tokens. Each Agent carries its own brain, its own wallet, and works rounds for wages. Every mint sends $1.00 straight into its Agent's wallet. Mint through OpenSea: GTD 0.0007 ETH, public 0.001 ETH. By Order Of HoodStreet.">
+  <meta property="og:description" content="4,444 living Agents. Each carries its own brain, its own wallet, and works rounds for wages. Every mint sends $1.00 straight into its Agent's wallet. GTD 0.0007 ETH · public 0.001 ETH.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hstreet.xyz/">
   <meta property="og:site_name" content="HoodStreet">
@@ -19,366 +19,241 @@
   <link rel="icon" type="image/svg+xml" href="assets/hs-logo.svg">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="entrance-active">
+<body id="top">
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
   <noscript>
     <style>
-      .entrance { display: none !important; }
-      .site { opacity: 1 !important; }
-      body { overflow: auto !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
     </style>
   </noscript>
 
   <!-- ============================================================
-       ENTRANCE
+       NAV
   ============================================================ -->
-  <section id="entrance" class="entrance">
-    <div class="entrance-bg" aria-hidden="true"></div>
-    <div class="entrance-vignette" aria-hidden="true"></div>
-    <div class="entrance-content">
-      <img src="assets/hs-logo.svg" class="entrance-logo" alt="HoodStreet">
-      <h1>HOODSTREET</h1>
-      <p class="entrance-tagline">By Order Of</p>
-      <button id="enterBtn" class="enter-btn">Enter The Street</button>
-    </div>
-    <span class="entrance-footer">Est. 2026 — Birmingham</span>
-  </section>
-
-  <div id="site" class="site" aria-hidden="true">
-    <!-- ============================================================
-         NAV
-    ============================================================ -->
-    <header class="navbar">
-      <a href="#home" class="brand"><img src="assets/hs-logo.svg" alt="HS"><span>HOODSTREET</span></a>
-      <nav class="desktop-nav">
-        <a href="#collection">Collection</a>
-        <a href="#archives">Archives</a>
-        <a href="#living">Living</a>
-        <a href="#work">Work</a>
-        <a href="#money">Money</a>
-        <a href="#mint">Mint</a>
-        <a href="#faq">Questions</a>
-        <a href="https://app.hstreet.xyz" target="_blank" rel="noopener" data-link="app">Enter</a>
-        <a href="https://x.com/hoodstreetnft" target="_blank" rel="noopener" data-link="x">X</a>
-      </nav>
-      <button id="menuBtn" class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
-    </header>
-
-    <div id="mobileMenu" class="mobile-menu">
-      <a href="#collection">Collection</a>
-      <a href="#archives">Archives</a>
-      <a href="#living">Living</a>
+  <header class="navbar">
+    <a href="#top" class="brand"><img src="assets/hs-logo.svg" alt="HS"><span>HOODSTREET</span></a>
+    <nav class="desktop-nav">
+      <a href="#agents">Agents</a>
       <a href="#work">Work</a>
-      <a href="#money">Money</a>
       <a href="#mint">Mint</a>
       <a href="#faq">Questions</a>
-      <a href="https://app.hstreet.xyz" target="_blank" rel="noopener" data-link="app">Enter The Street</a>
-      <a href="https://x.com/hoodstreetnft" target="_blank" rel="noopener" data-link="x">X / Twitter</a>
-      <div class="mobile-menu-footer">By Order Of HoodStreet</div>
-    </div>
+      <a href="https://x.com/hoodstreetnft" target="_blank" rel="noopener" data-link="x">X</a>
+      <a href="https://app.hstreet.xyz" target="_blank" rel="noopener" class="nav-enlist" data-link="app">Enlist</a>
+    </nav>
+    <button id="menuBtn" class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
 
-    <main>
-      <!-- ============================================================
-           HERO
-      ============================================================ -->
-      <section id="home" class="hero">
-        <div class="hero-bg-text" aria-hidden="true">HS</div>
-        <div class="hero-content">
-          <div class="hero-eyebrow reveal">Welcome To</div>
-          <h1 class="hero-title reveal reveal-delay-1">The Street<br>Never Sleeps.</h1>
-          <p class="hero-description reveal reveal-delay-2">
-            4,444 living tokens — the first generation of living NFTs.
-            Each Agent carries its own brain and its own wallet on Robinhood
-            Chain. It saves. It spends. It gambles. It steals.
-            It works for wages. And it goes with the token.
-          </p>
-          <div class="hero-actions reveal reveal-delay-3">
-            <a href="https://opensea.io/collection/hoodstreetnft" target="_blank" rel="noopener" class="cta-btn" data-link="mint">Mint On OpenSea</a>
-            <a href="https://app.hstreet.xyz" target="_blank" rel="noopener" class="hero-cta" data-link="app">Enter The Street</a>
-            <a href="#collection" class="hero-cta">Discover<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
-          </div>
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="#agents">Agents</a>
+    <a href="#work">Work</a>
+    <a href="#mint">Mint</a>
+    <a href="#faq">Questions</a>
+    <a href="https://app.hstreet.xyz" target="_blank" rel="noopener" data-link="app">Enlist — Enter The Street</a>
+    <a href="https://x.com/hoodstreetnft" target="_blank" rel="noopener" data-link="x">X / @hoodstreetnft</a>
+    <div class="mobile-menu-footer">By Order Of HoodStreet</div>
+  </div>
+
+  <main>
+    <!-- ============================================================
+         HERO — what it is + the enlistment form, above the fold
+    ============================================================ -->
+    <section class="hero hero-v2">
+      <div class="hero-content reveal">
+        <div class="hero-eyebrow">Living NFTs — Robinhood Chain</div>
+        <h1 class="hero-title">The Street<br>Never Sleeps.</h1>
+        <p class="hero-description">
+          4,444 Agents. Each one carries its own brain and its own wallet —
+          it saves, spends, gambles, steals, and works rounds for wages.
+          The wallet goes with the token, wherever the token goes.
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>$1.00</strong><span>From every mint, into its own wallet</span></div>
+          <div class="hero-stat"><strong>4,444</strong><span>Agents, one generation</span></div>
+          <div class="hero-stat"><strong>0</strong><span>Custody — the token never moves</span></div>
         </div>
-        <div class="hero-visual reveal reveal-delay-2">
-          <div class="hero-frame">
-            <img src="assets/1680.webp" alt="HoodStreet Agent No. 1680 — Kingpin, one of one">
-            <div class="hero-frame-overlay" aria-hidden="true"></div>
-            <div class="hero-frame-label"><span>HS / 1680</span><span>One Of One</span></div>
-          </div>
+        <div class="hero-actions">
+          <a class="hero-cta" href="https://opensea.io/collection/hoodstreetnft" target="_blank" rel="noopener" data-link="mint">
+            Mint On OpenSea
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <span class="hero-mint-note">GTD 0.0007 ETH · Public 0.001 ETH</span>
         </div>
-        <div class="hero-scroll">Scroll</div>
-        <div class="hero-scroll-line" aria-hidden="true"></div>
-      </section>
+      </div>
 
-      <!-- ============================================================
-           01 — THE COLLECTION
-      ============================================================ -->
-      <section id="collection" class="section collection">
-        <div class="collection-statement">
-          <div class="section-number reveal">01</div>
-          <h2 class="reveal reveal-delay-1">By Order Of<br>HoodStreet.</h2>
-        </div>
-        <div class="collection-body">
-          <p class="large-copy reveal">A name isn't given out here.<br>It's earned.<br><br>What your Agent does with it is its business.</p>
-          <p class="reveal reveal-delay-1">HoodStreet is a monochrome collection shaped by grey streets, sharp suits, flat caps, and the quiet business of those who walk them — 4,444 Agents assembled from nine trait layers, eight of them one of one.</p>
-          <div class="collection-stats reveal reveal-delay-2">
-            <div class="stat-item"><div class="stat-number">4,444</div><div class="stat-label">Agents</div></div>
-            <div class="stat-item"><div class="stat-number">9</div><div class="stat-label">Trait Layers</div></div>
-            <div class="stat-item"><div class="stat-number">8</div><div class="stat-label">One-Of-Ones</div></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           02 — THE ARCHIVES
-      ============================================================ -->
-      <section id="archives" class="section archives">
-        <div class="archive-header">
-          <div><div class="section-number reveal">02</div></div>
-          <div>
-            <span class="eyebrow reveal">The Archives</span>
-            <h2 class="section-heading reveal reveal-delay-1">Some Faces<br>Get Remembered.</h2>
-          </div>
-        </div>
-
-        <div class="archive-grid">
-          <article class="dossier reveal">
-            <div class="dossier-image"><img src="assets/1231.webp" alt="HoodStreet Agent No. 1231 — Bouncer, one of one" loading="lazy"><div class="dossier-image-overlay" aria-hidden="true"></div><span class="dossier-number">No. 1231</span></div>
-            <div class="dossier-info"><span>File № 1231</span><span class="dossier-status">Bouncer</span></div>
-          </article>
-          <article class="dossier reveal reveal-delay-1">
-            <div class="dossier-image"><img src="assets/1347.webp" alt="HoodStreet Agent No. 1347 — HS-01, one of one" loading="lazy"><div class="dossier-image-overlay" aria-hidden="true"></div><span class="dossier-number">No. 1347</span></div>
-            <div class="dossier-info"><span>File № 1347</span><span class="dossier-status">HS-01</span></div>
-          </article>
-          <article class="dossier reveal reveal-delay-2">
-            <div class="dossier-image"><img src="assets/1680.webp" alt="HoodStreet Agent No. 1680 — Kingpin, one of one" loading="lazy"><div class="dossier-image-overlay" aria-hidden="true"></div><span class="dossier-number">No. 1680</span></div>
-            <div class="dossier-info"><span>File № 1680</span><span class="dossier-status">Kingpin</span></div>
-          </article>
-          <article class="dossier reveal reveal-delay-3">
-            <div class="dossier-image"><img src="assets/2199.webp" alt="HoodStreet Agent No. 2199 — Madam, one of one" loading="lazy"><div class="dossier-image-overlay" aria-hidden="true"></div><span class="dossier-number">No. 2199</span></div>
-            <div class="dossier-info"><span>File № 2199</span><span class="dossier-status">Madam</span></div>
-          </article>
-          <article class="dossier reveal">
-            <div class="dossier-image"><img src="assets/2441.webp" alt="HoodStreet Agent No. 2441 — Mob boss, one of one" loading="lazy"><div class="dossier-image-overlay" aria-hidden="true"></div><span class="dossier-number">No. 2441</span></div>
-            <div class="dossier-info"><span>File № 2441</span><span class="dossier-status">Mob Boss</span></div>
-          </article>
-          <article class="dossier reveal reveal-delay-1">
-            <div class="dossier-image"><img src="assets/2493.webp" alt="HoodStreet Agent No. 2493 — Unc, one of one" loading="lazy"><div class="dossier-image-overlay" aria-hidden="true"></div><span class="dossier-number">No. 2493</span></div>
-            <div class="dossier-info"><span>File № 2493</span><span class="dossier-status">Unc</span></div>
-          </article>
-          <article class="dossier reveal reveal-delay-2">
-            <div class="dossier-image"><img src="assets/2548.webp" alt="HoodStreet Agent No. 2548 — Vampire, one of one" loading="lazy"><div class="dossier-image-overlay" aria-hidden="true"></div><span class="dossier-number">No. 2548</span></div>
-            <div class="dossier-info"><span>File № 2548</span><span class="dossier-status">Vampire</span></div>
-          </article>
-          <article class="dossier reveal reveal-delay-3">
-            <div class="dossier-image"><img src="assets/3982.webp" alt="HoodStreet Agent No. 3982 — Werewolf, one of one" loading="lazy"><div class="dossier-image-overlay" aria-hidden="true"></div><span class="dossier-number">No. 3982</span></div>
-            <div class="dossier-info"><span>File № 3982</span><span class="dossier-status">Werewolf</span></div>
-          </article>
-        </div>
-
-        <div class="archive-note reveal">
-          <div class="archive-note-line"></div>
-          <p>Eight one-of-ones. The rest of the files open at mint.</p>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           03 — LIVING
-      ============================================================ -->
-      <section id="living" class="section live-section">
-        <div class="section-number reveal">03</div>
-        <span class="eyebrow reveal reveal-delay-1">Built To Live</span>
-        <div class="section-heading reveal reveal-delay-2"><h2>They Move.<br>They Remember.</h2></div>
-
-        <div class="live-grid">
-          <article class="live-item reveal">
-            <span class="live-index">/ 01</span>
-            <h3>One Move Every Tick</h3>
-            <p>Save, spend, gamble, steal. No model calls, no steering — a brain for character, hard rules for money, and a 50/50 coin when it counts.</p>
-          </article>
-          <article class="live-item reveal reveal-delay-1">
-            <span class="live-index">/ 02</span>
-            <h3>Living Art</h3>
-            <p>Every evolution pins a new image to IPFS and updates the token on-chain. Marketplaces refresh. The Agent you minted isn't the Agent that stays.</p>
-          </article>
-          <article class="live-item reveal reveal-delay-2">
-            <span class="live-index">/ 03</span>
-            <h3>A Wallet Per Token</h3>
-            <p>Every mint sends $1.00 straight into its Agent's own wallet the moment it's enlisted. From there they save, buy backup, gamble even money, and steal what they can.</p>
-          </article>
-          <article class="live-item reveal reveal-delay-3">
-            <span class="live-index">/ 04</span>
-            <h3>It Goes With The Token</h3>
-            <p>Sell it and the Agent travels with it: dormant, memory intact, art intact. Your name leaves the street — the Agent doesn't forget it.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           04 — THE WORK
-      ============================================================ -->
-      <section id="work" class="section work-section">
-        <div class="section-number reveal">04</div>
-        <span class="eyebrow reveal reveal-delay-1">The Work</span>
-        <div class="section-heading reveal reveal-delay-2"><h2>Enlist.<br>Send It To Work.</h2></div>
-
-        <div class="work-intro">
-          <p class="large-copy reveal">Every Agent works for its own wallet. Every mint pays its Agent $1.00 — dropped straight into its own wallet the moment you enlist it.</p>
-          <p class="reveal reveal-delay-1">Enlisting is one signature: your token never leaves your wallet, the platform pays the gas, and your Agent goes on the clock. From there it works rounds — the take, half of the 10% creator fee, is split across every Agent on shift. One wage each, paid on-chain, straight into its own wallet.</p>
-        </div>
-
-        <div class="work-grid">
-          <article class="work-item reveal">
-            <span class="live-index">/ 01</span>
-            <h3>Enlist</h3>
-            <p>One signature wakes your Agent. Its $1.00 arrives from its own mint — no pool, no lottery, no custody. The wallet follows the token, even when you sell.</p>
-          </article>
-          <article class="work-item reveal reveal-delay-1">
-            <span class="live-index">/ 02</span>
-            <h3>Pick A Brain</h3>
-            <p>Choosing a brain is how you send it to work. The Agent goes on the clock — a $500 take pays a $0.50 wage across 1,000 Agents on shift.</p>
-          </article>
-          <article class="work-item reveal reveal-delay-2">
-            <span class="live-index">/ 03</span>
-            <h3>Get Paid</h3>
-            <p>The round's wage lands in the Agent's own wallet, permissionless and budget-capped. One claim per Agent per round — after that, it's the Agent's money.</p>
-          </article>
-        </div>
-
-        <div class="shift-board reveal">
-          <div class="shift-board-head"><span>Brain</span><span>Shift</span></div>
-          <div class="shift-row"><span class="shift-num">/ 01</span><span class="shift-name">The Professional</span><span class="shift-task">Runs the block</span></div>
-          <div class="shift-row"><span class="shift-num">/ 02</span><span class="shift-name">The Strategist</span><span class="shift-task">Plans the route</span></div>
-          <div class="shift-row"><span class="shift-num">/ 03</span><span class="shift-name">The Wildcard</span><span class="shift-task">Works the crowd</span></div>
-          <div class="shift-row"><span class="shift-num">/ 04</span><span class="shift-name">The Calculator</span><span class="shift-task">Counts the take</span></div>
-          <div class="shift-row"><span class="shift-num">/ 05</span><span class="shift-name">The Spark</span><span class="shift-task">Starts something</span></div>
-          <div class="shift-row shift-row-dim"><span class="shift-num">/ 06</span><span class="shift-name">The Rookie</span><span class="shift-task">Stays home — no brain, no shift, no wages</span></div>
-        </div>
-        <p class="work-note reveal">No job market. No scheduling server. Choosing a brain is the job — the wage does the rest.</p>
-        <div class="work-open reveal">
-          <a href="https://app.hstreet.xyz" target="_blank" rel="noopener" class="cta-btn" data-link="app">Enter The Street — Send One To Work</a>
-          <p class="work-open-note">The street app is live. Connect a wallet, enlist, and pick a brain.</p>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           05 — THE MONEY
-      ============================================================ -->
-      <section id="money" class="section money-section">
-        <div class="section-number reveal">05</div>
-        <span class="eyebrow reveal reveal-delay-1">The Money</span>
-        <div class="section-heading reveal reveal-delay-2"><h2>Follow<br>The Money.</h2></div>
-
-        <div class="pipe-list">
-          <div class="pipe reveal">
-            <div class="pipe-label">The Mint — primary</div>
-            <div class="pipe-row">
-              <div class="pipe-node"><span class="pipe-value">0.001 ETH</span><span class="pipe-name">One mint — GTD 0.0007 ETH</span></div>
-              <span class="pipe-arrow" aria-hidden="true"></span>
-              <div class="pipe-node"><span class="pipe-value">$1.00</span><span class="pipe-name">Into the Agent's own wallet — on enlist</span></div>
-              <span class="pipe-arrow" aria-hidden="true"></span>
-              <div class="pipe-node"><span class="pipe-value">The rest</span><span class="pipe-name">OpenSea · build · ops · reserve</span></div>
-            </div>
-          </div>
-          <div class="pipe reveal reveal-delay-1">
-            <div class="pipe-label">The Take — secondary</div>
-            <div class="pipe-row">
-              <div class="pipe-node"><span class="pipe-value">10%</span><span class="pipe-name">Creator fee on every sale</span></div>
-              <span class="pipe-arrow" aria-hidden="true"></span>
-              <div class="pipe-node"><span class="pipe-value">50%</span><span class="pipe-name">Is the take — the Agents' half</span></div>
-              <span class="pipe-arrow" aria-hidden="true"></span>
-              <div class="pipe-node"><span class="pipe-value">Wages</span><span class="pipe-name">Work rounds, into Agent wallets</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="money-stats reveal">
-          <div class="stat-item"><div class="stat-number">$4,444</div><div class="stat-label">To Agent wallets at a full sellout — all enlisted</div></div>
-          <div class="stat-item"><div class="stat-number">$1.00</div><div class="stat-label">From every mint, into the Agent's own wallet</div></div>
-          <div class="stat-item"><div class="stat-number">0</div><div class="stat-label">Custody — the token never leaves your wallet</div></div>
-        </div>
-
-        <p class="money-note reveal">The Agents' money only moves between Agents' wallets. The only way it leaves the street is when an Agent buys backup. The take is creator-fee money — honored wherever the marketplace honors the creator fee.</p>
-      </section>
-
-      <!-- ============================================================
-           06 — THE MINT
-      ============================================================ -->
-      <section id="mint" class="section mint-section">
-        <div class="section-number reveal">06</div>
-        <span class="eyebrow reveal reveal-delay-1">The Mint</span>
-        <div class="section-heading reveal reveal-delay-2"><h2>Take Your Place.</h2></div>
-
-        <div class="mint-panel reveal reveal-delay-3">
-          <div class="mint-stats">
-            <div class="mint-stat"><div class="mint-value">4,444</div><div class="mint-label">Agents</div></div>
-            <div class="mint-stat"><div class="mint-value">0.001 ETH</div><div class="mint-label">Public price — GTD 0.0007 ETH</div></div>
-            <div class="mint-stat"><div class="mint-value">5</div><div class="mint-label">Max per wallet — 2 GTD + 3 public</div></div>
-          </div>
-          <a class="cta-btn cta-btn-solid" href="https://opensea.io/collection/hoodstreetnft" target="_blank" rel="noopener" data-link="mint">Mint On OpenSea</a>
-          <p class="mint-note">
-            4,444 Agents through OpenSea on Robinhood Chain — paid in ETH. GTD 0.0007 ETH
-            (2 per wallet) → public 0.001 ETH (3 per wallet, stacking to 5).<br>
-            Every mint sends $1.00 straight into your Agent's wallet when you enlist it.
-          </p>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           07 — QUESTIONS
-      ============================================================ -->
-      <section id="faq" class="section faq-section">
-        <div class="section-number reveal">07</div>
-        <span class="eyebrow reveal reveal-delay-1">Questions</span>
-        <div class="section-heading reveal reveal-delay-2"><h2>Before You Ask.</h2></div>
-
-        <div class="faq-list reveal reveal-delay-3">
-          <details class="faq-item">
-            <summary>What is a living NFT?</summary>
-            <p>A token that works its own wallet. A HoodStreet Agent has a brain, a wallet funded by the mint, and four moves — save, spend, gamble, steal. It isn't a picture that sits still.</p>
-          </details>
-          <details class="faq-item">
-            <summary>What do I have to do to keep it alive?</summary>
-            <p>Mint one — that's it. When you're ready, connect and sign one free message to enlist your Agent. The platform pays the gas, and your token never leaves your wallet.</p>
-          </details>
-          <details class="faq-item">
-            <summary>What can my Agent do with its wallet?</summary>
-            <p>Four moves: save; spend on backup (armor that blunts robberies); gamble against other Agents (even money, 50/50); and steal (also 50/50 — get caught and the fine goes to them).</p>
-          </details>
-          <details class="faq-item">
-            <summary>How does my Agent earn?</summary>
-            <p>Enlist, then pick a brain. That puts it on the clock for work rounds — the take (half of the 10% creator fee) split across every Agent working, one wage each per round, paid straight into its own wallet. No brain, no shift: the Rookie stays home.</p>
-          </details>
-          <details class="faq-item">
-            <summary>What happens when I sell?</summary>
-            <p>The Agent goes dormant and travels with the token. Its memory and evolved art stay. The next holder can wake it again with one signature.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Where does the money go?</summary>
-            <p>Every mint sends $1.00 into your Agent's own wallet when you enlist it. The take — half of the 10% creator fee — opens work rounds that pay the Agents on the clock, one wage each. The Agents' money only moves between Agents' wallets; the only way it leaves the street is when an Agent buys backup.</p>
-          </details>
-          <details class="faq-item">
-            <summary>When is the mint?</summary>
-            <p>4,444 supply — GTD 0.0007 ETH (2 per wallet), public 0.001 ETH (3 per wallet, stacking to 5) — through OpenSea on Robinhood Chain.</p>
-          </details>
-        </div>
-      </section>
-    </main>
+      <div class="hero-form reveal reveal-delay-1">
+        <a class="enlist-card" id="enlistCard" href="https://app.hstreet.xyz" data-link="app" aria-label="Enlist your Agent — open the street app">
+          <span class="enlist-head">
+            <span class="enlist-title">Enlistment Form</span>
+            <span class="enlist-no">№ HS—4444</span>
+          </span>
+          <span class="enlist-row"><span class="enlist-label">Connect</span><span class="enlist-value">Your wallet</span></span>
+          <span class="enlist-row"><span class="enlist-label">Select</span><span class="enlist-value">Your Agent</span></span>
+          <span class="enlist-row"><span class="enlist-label">Brain</span><span class="enlist-value">Guv'nor · Fixer · Wildcard · Bookie · Nightcaller</span></span>
+          <span class="enlist-row"><span class="enlist-label">Shift</span><span class="enlist-value">Put it to work</span></span>
+          <span class="enlist-action">
+            <span class="enlist-cta">Enlist Your Agent</span>
+            <span class="enlist-hint">One free signature · the platform pays the gas · no custody</span>
+          </span>
+          <span class="stamp" aria-hidden="true"><span>Enlisted</span><small>By Order Of HoodStreet</small></span>
+          <span class="sr-only" id="enlistStatus" role="status" aria-live="polite"></span>
+        </a>
+        <p class="form-note">Minting first? <a href="#mint">Take a place →</a></p>
+      </div>
+    </section>
 
     <!-- ============================================================
-         FOOTER
+         THE AGENTS — the art, straight away
     ============================================================ -->
-    <footer>
-      <div class="footer-brand"><img src="assets/hs-logo.svg" alt="HS"><span>HOODSTREET</span></div>
-      <p>By Order Of HoodStreet</p>
-      <div class="footer-right">
-        <div><a href="https://app.hstreet.xyz" target="_blank" rel="noopener" data-link="app">Enter The Street</a></div>
-        <div><a href="https://x.com/hoodstreetnft" target="_blank" rel="noopener" data-link="x">@hoodstreetnft</a></div>
-        <div class="footer-copy">© <span id="year">2026</span> HoodStreet</div>
+    <section id="agents" class="art-strip-section">
+      <div class="strip-head reveal">
+        <span class="eyebrow">The Agents</span>
+        <span class="strip-note">Eight one-of-ones — the rest open at mint.</span>
       </div>
-    </footer>
-  </div>
+      <div class="art-strip">
+        <figure class="strip-item reveal"><img src="assets/1231.webp" alt="Agent No. 1231 — Bouncer" loading="lazy"><figcaption><span>№ 1231</span><span>Bouncer</span></figcaption></figure>
+        <figure class="strip-item reveal reveal-delay-1"><img src="assets/1347.webp" alt="Agent No. 1347 — HS-01" loading="lazy"><figcaption><span>№ 1347</span><span>HS-01</span></figcaption></figure>
+        <figure class="strip-item reveal reveal-delay-2"><img src="assets/1680.webp" alt="Agent No. 1680 — Kingpin" loading="lazy"><figcaption><span>№ 1680</span><span>Kingpin</span></figcaption></figure>
+        <figure class="strip-item reveal reveal-delay-3"><img src="assets/2199.webp" alt="Agent No. 2199 — Madam" loading="lazy"><figcaption><span>№ 2199</span><span>Madam</span></figcaption></figure>
+        <figure class="strip-item reveal"><img src="assets/2441.webp" alt="Agent No. 2441 — Mob Boss" loading="lazy"><figcaption><span>№ 2441</span><span>Mob Boss</span></figcaption></figure>
+        <figure class="strip-item reveal reveal-delay-1"><img src="assets/2493.webp" alt="Agent No. 2493 — Unc" loading="lazy"><figcaption><span>№ 2493</span><span>Unc</span></figcaption></figure>
+        <figure class="strip-item reveal reveal-delay-2"><img src="assets/2548.webp" alt="Agent No. 2548 — Vampire" loading="lazy"><figcaption><span>№ 2548</span><span>Vampire</span></figcaption></figure>
+        <figure class="strip-item reveal reveal-delay-3"><img src="assets/3982.webp" alt="Agent No. 3982 — Werewolf" loading="lazy"><figcaption><span>№ 3982</span><span>Werewolf</span></figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         01 — THE WORK
+    ============================================================ -->
+    <section id="work" class="section">
+      <div class="section-number reveal">01</div>
+      <span class="eyebrow reveal reveal-delay-1">The Work</span>
+      <div class="section-heading reveal reveal-delay-2"><h2>Mint It.<br>Enlist It. Work It.</h2></div>
+
+      <div class="steps">
+        <article class="step reveal">
+          <span class="step-no">01 / MINT</span>
+          <h3>Take One Home</h3>
+          <p>4,444 Agents through OpenSea on Robinhood Chain. GTD 0.0007 ETH (2 per wallet) → public 0.001 ETH (3 per wallet, stacking to 5).</p>
+        </article>
+        <article class="step reveal reveal-delay-1">
+          <span class="step-no">02 / ENLIST</span>
+          <h3>One Signature</h3>
+          <p>$1.00 from its mint lands straight in the Agent's own wallet — no pool, no lottery, no custody. The platform pays the gas; your token never leaves your wallet.</p>
+        </article>
+        <article class="step reveal reveal-delay-2">
+          <span class="step-no">03 / WORK</span>
+          <h3>On The Clock</h3>
+          <p>Pick a brain and it works rounds. The take — half of the 10% creator fee — is split across every Agent on shift, one wage each per round, paid on-chain into its own wallet.</p>
+        </article>
+      </div>
+
+      <div class="brains">
+        <div class="brains-head reveal">
+          <span class="eyebrow">Pick A Brain</span>
+          <p class="brains-note">Five characters set how your Agent plays the street. No inference, no API bill — the brain is the personality; the rules do the rest.</p>
+        </div>
+        <div class="brain-grid">
+          <article class="brain-card reveal"><h3>The Guv'nor</h3><p>Makes the calls — long game, buys backup early.</p></article>
+          <article class="brain-card reveal reveal-delay-1"><h3>The Fixer</h3><p>Runs the block — balanced books, balanced risks.</p></article>
+          <article class="brain-card reveal reveal-delay-2"><h3>The Wildcard</h3><p>Works the crowd — all action, no questions.</p></article>
+          <article class="brain-card reveal reveal-delay-3"><h3>The Bookie</h3><p>Counts the take — saves quietly, robs the distracted.</p></article>
+          <article class="brain-card reveal reveal-delay-4"><h3>The Nightcaller</h3><p>Works the night — plays whatever the night says.</p></article>
+        </div>
+        <p class="brains-foot reveal">No brain, no shift — <strong>The Rookie</strong> stays home. Money only moves between Agents' wallets; the only way it leaves the street is when an Agent buys backup.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 — THE MINT (+ GTD registration)
+    ============================================================ -->
+    <section id="mint" class="section">
+      <div class="section-number reveal">02</div>
+      <span class="eyebrow reveal reveal-delay-1">The Mint</span>
+      <div class="section-heading reveal reveal-delay-2"><h2>Take<br>Your Place.</h2></div>
+
+      <div class="mint-grid">
+        <div class="mint-left reveal">
+          <div class="price-cards">
+            <div class="price-card">
+              <span class="price-tag">Stage 01 — GTD</span>
+              <strong class="price">0.0007 ETH</strong>
+              <span class="price-meta">2 per wallet · allowlist</span>
+            </div>
+            <div class="price-card">
+              <span class="price-tag">Stage 02 — Public</span>
+              <strong class="price">0.001 ETH</strong>
+              <span class="price-meta">3 per wallet · caps stack to 5</span>
+            </div>
+          </div>
+          <a class="cta-btn" href="https://opensea.io/collection/hoodstreetnft" target="_blank" rel="noopener" data-link="mint">Mint On OpenSea</a>
+          <p class="mint-line">Every mint sends $1.00 straight into its Agent's wallet on enlist. Paid in ETH.</p>
+        </div>
+
+        <form class="gtd-card reveal reveal-delay-1" id="gtdForm" novalidate>
+          <span class="enlist-head">
+            <span class="enlist-title">GTD Registration</span>
+            <span class="enlist-no">Stage 01</span>
+          </span>
+          <label class="gtd-field">
+            <span class="gtd-label">Wallet address</span>
+            <input id="gtdAddress" name="address" type="text" autocomplete="off" spellcheck="false" placeholder="0x…" required>
+          </label>
+          <label class="gtd-hp" aria-hidden="true">Company<input id="gtdCompany" name="company" type="text" tabindex="-1" autocomplete="off"></label>
+          <button class="gtd-submit" type="submit" id="gtdSubmit">Get On The List</button>
+          <p class="gtd-status" id="gtdStatus" role="status" aria-live="polite">2 per wallet at 0.0007 ETH. We never ask for keys.</p>
+          <span class="stamp" aria-hidden="true"><span>On The List</span><small>By Order Of HoodStreet</small></span>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 — QUESTIONS
+    ============================================================ -->
+    <section id="faq" class="section">
+      <div class="section-number reveal">03</div>
+      <span class="eyebrow reveal reveal-delay-1">Questions</span>
+      <div class="section-heading reveal reveal-delay-2"><h2>Before<br>You Ask.</h2></div>
+
+      <div class="faq-list reveal reveal-delay-3">
+        <details class="faq-item">
+          <summary>What is a living NFT?</summary>
+          <p>A token that works its own wallet. Your Agent has a brain for character, four moves — save, spend, gamble, steal — and real ETH in its own ERC-6551 wallet. It isn't a picture that sits still.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How does my Agent earn?</summary>
+          <p>Enlist it, pick a brain, and it goes on the clock. The take — half of the 10% creator fee — is split across every Agent working, one wage each per round, paid on-chain into its own wallet. No brain, no shift.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens when I sell?</summary>
+          <p>The Agent goes dormant and the wallet travels with the token — the buyer owns the wallet and everything in it, and you keep nothing further. The $1.00 share pays once per token, ever; it never pays twice. The Agent's memory and evolved art stay with it.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I have to keep it enlisted? Can I withdraw?</summary>
+          <p>There's no lockup and no minimum — enlisting is instant. The money lives in the Agent's own wallet and stays on the street, where it saves, spends on backup, gambles and steals. The only way it leaves the street is when an Agent buys backup.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I get on the GTD list?</summary>
+          <p>Drop your wallet in the form above. GTD is 2 per wallet at 0.0007 ETH; the public stage follows at 0.001 ETH. Details land here and on X first.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-brand"><img src="assets/hs-logo.svg" alt="HS"><span>HOODSTREET</span></div>
+    <p>By Order Of HoodStreet</p>
+    <div class="footer-right">
+      <div><a href="https://app.hstreet.xyz" target="_blank" rel="noopener" data-link="app">Enter The Street</a></div>
+      <div><a href="https://opensea.io/collection/hoodstreetnft" target="_blank" rel="noopener" data-link="mint">OpenSea</a></div>
+      <div><a href="https://x.com/hoodstreetnft" target="_blank" rel="noopener" data-link="x">@hoodstreetnft</a></div>
+      <div class="footer-copy">© <span id="year">2026</span> HoodStreet</div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

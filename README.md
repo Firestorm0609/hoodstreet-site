@@ -49,5 +49,6 @@ Don't add the `CNAME` file before the DNS records exist, or the `*.github.io` UR
 - **Name**: lives in `index.html` (title, meta, entrance, nav, footer). Find/replace "HoodStreet".
 - **Links**: the mint button and every X link are set from `LINKS` at the top of `script.js`.
 - **Art**: swap files in `assets/` — square webp looks best. The eight one-of-ones are 1231 (Bouncer), 1347 (HS-01), 1680 (Kingpin), 2199 (Madam), 2441 (Mob boss), 2493 (Unc), 2548 (Vampire), 3982 (Werewolf).
-- **Entrance screen**: remove the `<section id="entrance">` block and the `class="entrance-active"` on `<body>` if you want the page to open directly on the hero.
+- **The enlistment form**: the hero card is a link (`#enlistCard`) that stamps itself, then opens `LINKS.app` — edit `script.js` to change the stamp timing or target.
+- **GTD form**: posts wallets to `GTD_ENDPOINT` in `script.js` (the API stores them in MongoDB; export as CSV for the OpenSea Studio allowlist).
 - **Copy**: every headline, stat and FAQ answer is plain text in `index.html`.

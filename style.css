@@ -1644,3 +1644,580 @@ footer a:hover { color: var(--white); }
     transition-duration: .01ms !important;
   }
 }
+
+
+/* =========================================================
+   V2 — SIMPLER STREET
+========================================================= */
+
+/* --- nav enlist pill ----------------------------------- */
+
+.nav-enlist {
+  padding: 10px 18px;
+  border: 1px solid var(--line-strong);
+  color: var(--white) !important;
+  transition: background .3s var(--ease-out), color .3s,
+    border-color .3s;
+}
+
+.desktop-nav a.nav-enlist::after { display: none; }
+
+.nav-enlist:hover {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--black) !important;
+}
+
+/* --- hero v2 ------------------------------------------- */
+
+.hero-stats {
+  margin-top: 38px;
+  display: flex;
+  gap: clamp(20px, 3vw, 46px);
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.hero-stat strong {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 400;
+  letter-spacing: -.03em;
+  color: var(--white);
+}
+
+.hero-stat span {
+  max-width: 175px;
+  font-size: .5rem;
+  letter-spacing: .18em;
+  line-height: 1.8;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.hero-mint-note {
+  font-size: .52rem;
+  letter-spacing: .22em;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+/* --- the enlistment form -------------------------------- */
+
+.enlist-card {
+  position: relative;
+  display: block;
+  width: min(100%, 520px);
+  margin-left: auto;
+  padding: clamp(22px, 3vw, 36px);
+  background: linear-gradient(180deg, var(--charcoal) 0%, var(--black-rich) 100%);
+  border: 1px solid var(--line-strong);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color .4s var(--ease-out), transform .4s var(--ease-out);
+}
+
+.enlist-card:hover {
+  border-color: rgba(255,255,255,.35);
+  transform: translateY(-2px);
+}
+
+.enlist-card:active { transform: translateY(0) scale(.995); }
+
+.enlist-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.enlist-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  letter-spacing: .04em;
+  color: var(--white);
+}
+
+.enlist-no {
+  font-family: var(--mono);
+  font-size: .5rem;
+  letter-spacing: .2em;
+  color: var(--grey);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.enlist-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.enlist-label {
+  font-size: .5rem;
+  letter-spacing: .26em;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.enlist-value {
+  font-size: .72rem;
+  letter-spacing: .05em;
+  line-height: 1.6;
+  color: var(--white-dim);
+  text-align: right;
+}
+
+.enlist-action {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-top: 24px;
+}
+
+.enlist-cta {
+  font-size: .6rem;
+  letter-spacing: .3em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.enlist-cta::after {
+  content: "→";
+  display: inline-block;
+  margin-left: 12px;
+  transition: transform .35s var(--ease-out);
+}
+
+.enlist-card:hover .enlist-cta::after { transform: translateX(6px); }
+
+.enlist-hint {
+  font-size: .48rem;
+  letter-spacing: .16em;
+  line-height: 1.8;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+/* --- the stamp ------------------------------------------ */
+
+.stamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  rotate: -7deg;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border: 3px solid var(--white);
+  outline: 1px solid var(--white);
+  outline-offset: 4px;
+  background: rgba(5,5,5,.82);
+  color: var(--white);
+  font-size: clamp(1rem, 2.4vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  scale: 2.4;
+  pointer-events: none;
+}
+
+.stamp small {
+  font-size: .42rem;
+  font-weight: 400;
+  letter-spacing: .32em;
+  color: var(--grey-light);
+}
+
+.stamped .stamp {
+  animation: stampSlam .55s cubic-bezier(.2,1.5,.4,1) .05s forwards;
+}
+
+@keyframes stampSlam {
+  0%  { opacity: 0; scale: 2.4; }
+  55% { opacity: 1; scale: .94; }
+  75% { scale: 1.05; }
+  100% { opacity: 1; scale: 1; }
+}
+
+/* --- the agents strip ------------------------------------ */
+
+.art-strip-section {
+  padding: 0 clamp(24px, 6vw, 90px) clamp(70px, 9vw, 120px);
+}
+
+.strip-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.strip-note {
+  font-size: .5rem;
+  letter-spacing: .2em;
+  color: var(--grey-dark);
+  text-transform: uppercase;
+}
+
+.art-strip {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2px;
+}
+
+.strip-item {
+  position: relative;
+  background: var(--charcoal);
+  overflow: hidden;
+}
+
+.strip-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  transition: filter .5s var(--ease-out), transform .5s var(--ease-out);
+}
+
+.strip-item:hover img {
+  filter: grayscale(.4) contrast(1.1);
+  transform: scale(1.04);
+}
+
+.strip-item figcaption {
+  position: absolute;
+  left: 9px;
+  right: 9px;
+  bottom: 9px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: .42rem;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.72);
+  text-transform: uppercase;
+}
+
+/* --- steps ------------------------------------------------ */
+
+.steps {
+  margin-top: clamp(40px, 6vw, 70px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.step {
+  min-height: 250px;
+  padding: clamp(24px, 3vw, 42px);
+  background: var(--charcoal);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-no {
+  font-family: var(--mono);
+  font-size: .52rem;
+  letter-spacing: .28em;
+  color: var(--grey);
+}
+
+.step h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  font-weight: 400;
+  letter-spacing: -.02em;
+  color: var(--white);
+}
+
+.step p {
+  font-size: .78rem;
+  line-height: 2;
+  color: var(--grey-light);
+}
+
+/* --- brains ------------------------------------------------ */
+
+.brains { margin-top: clamp(60px, 8vw, 110px); }
+
+.brains-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.brains-note {
+  max-width: 470px;
+  font-size: .72rem;
+  line-height: 1.95;
+  color: var(--grey-light);
+}
+
+.brain-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+}
+
+.brain-card {
+  padding: 24px 20px;
+  background: var(--charcoal);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color .35s;
+}
+
+.brain-card:hover { border-color: var(--line-strong); }
+
+.brain-card h3 {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  font-weight: 400;
+  letter-spacing: .01em;
+  color: var(--white);
+}
+
+.brain-card p {
+  font-size: .6rem;
+  line-height: 1.85;
+  color: var(--grey);
+}
+
+.brains-foot {
+  margin-top: 24px;
+  max-width: 780px;
+  font-size: .6rem;
+  letter-spacing: .12em;
+  line-height: 2.1;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.brains-foot strong {
+  color: var(--white-dim);
+  font-weight: 400;
+}
+
+/* --- the mint + GTD form ----------------------------------- */
+
+.mint-grid {
+  margin-top: clamp(40px, 6vw, 70px);
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: clamp(30px, 5vw, 70px);
+  align-items: start;
+}
+
+.price-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.price-card {
+  padding: clamp(22px, 3vw, 36px);
+  background: var(--charcoal);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.price-tag {
+  font-size: .5rem;
+  letter-spacing: .3em;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.price {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 400;
+  letter-spacing: -.03em;
+  color: var(--white);
+}
+
+.price-meta {
+  font-size: .55rem;
+  letter-spacing: .18em;
+  line-height: 1.9;
+  color: var(--grey-light);
+  text-transform: uppercase;
+}
+
+.mint-left .cta-btn { margin-top: 28px; }
+
+.mint-line {
+  margin-top: 22px;
+  max-width: 430px;
+  font-size: .6rem;
+  letter-spacing: .14em;
+  line-height: 2.1;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.gtd-card {
+  position: relative;
+  padding: clamp(24px, 3vw, 36px);
+  background: linear-gradient(180deg, var(--charcoal) 0%, var(--black-rich) 100%);
+  border: 1px solid var(--line-strong);
+  overflow: hidden;
+}
+
+.gtd-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.gtd-label {
+  font-size: .5rem;
+  letter-spacing: .26em;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.gtd-field input {
+  width: 100%;
+  padding: 16px;
+  background: var(--black-rich);
+  border: 1px solid var(--line-strong);
+  color: var(--white);
+  font-family: var(--mono);
+  font-size: .78rem;
+  letter-spacing: .04em;
+  outline: none;
+  transition: border-color .3s;
+}
+
+.gtd-field input:focus { border-color: var(--white); }
+.gtd-field input::placeholder { color: var(--grey-muted); }
+.gtd-field input:disabled { opacity: .6; }
+
+.gtd-submit {
+  margin-top: 18px;
+  width: 100%;
+  padding: 17px 20px;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--white-dim);
+  font-size: .58rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .35s var(--ease-out), color .35s, border-color .35s;
+}
+
+.gtd-submit:hover:not(:disabled) {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--black);
+}
+
+.gtd-submit:disabled { opacity: .45; cursor: default; }
+
+.gtd-status {
+  margin-top: 16px;
+  min-height: 3em;
+  font-size: .56rem;
+  letter-spacing: .14em;
+  line-height: 2;
+  color: var(--grey-light);
+  text-transform: uppercase;
+}
+
+.gtd-status[data-error="true"] { color: var(--white); }
+
+.gtd-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.form-note {
+  margin-top: 16px;
+  font-size: .52rem;
+  letter-spacing: .2em;
+  color: var(--grey);
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.form-note a {
+  color: var(--grey-light);
+  border-bottom: 1px solid var(--grey-dark);
+  transition: color .3s, border-color .3s;
+}
+
+.form-note a:hover { color: var(--white); border-color: var(--white); }
+
+/* --- v2 responsive ----------------------------------------- */
+
+@media (max-width: 1024px) {
+  .steps { grid-template-columns: 1fr; }
+  .brain-grid { grid-template-columns: repeat(2, 1fr); }
+  .mint-grid { grid-template-columns: 1fr; }
+  .enlist-card { margin-left: 0; }
+  .form-note { text-align: left; }
+}
+
+@media (max-width: 768px) {
+  .hero-stats { gap: 18px; }
+  .art-strip {
+    grid-auto-flow: column;
+    grid-auto-columns: 42%;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .strip-item { scroll-snap-align: start; }
+  .strip-head { flex-direction: column; gap: 8px; }
+  .brain-grid { grid-template-columns: 1fr; }
+  .price-cards { grid-template-columns: 1fr; }
+  .stamp { white-space: normal; text-align: center; letter-spacing: .16em; }
+  .enlist-value { text-align: right; }
+}
